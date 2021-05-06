@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "enter your salary"
+
+read salary
+
+if [ $salary -gt 2000 ]
+then
+	tax=`expr $salary \* 15 \/ 100`
+	salary=`expr $salary - $tax`
+	echo "Your net salary after tax reduction:$salary"
+elif [[ $salary -lt 2000 && $salary -ge 1000 ]]
+then
+	tax=`expr $salary \* 10 \/ 100`
+	salary=`expr $salary - $tax`
+	echo "Your net salary after tax reduction:$salary"
+else
+	echo "Your net salary after tax reduction:$salary"
+fi
+

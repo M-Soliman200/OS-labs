@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "enter a number"
+read num
+
+echo "enter a power"
+read pow
+sum=1
+
+while [ $pow -gt 0 ]
+do
+	sum=`expr $sum \* $num`
+	pow=`expr $pow \- 1`
+done
+echo "result = $sum"

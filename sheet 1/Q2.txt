@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "enter a temperature in degrees Celsius"
+read cel
+
+cel=`expr $cel \* 9 \/ 5 \+ 32`
+echo "Fahrenheit= $cel"

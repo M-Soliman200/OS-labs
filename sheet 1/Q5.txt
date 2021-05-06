@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "enter the number"
+read num
+
+div=`expr $num \/ 2`
+
+while [ $div -gt 1 ]
+do 
+	ch=`expr $num \% $div`
+	if [ $ch -eq 0 ]
+	then
+		echo "the number $num is not pime"
+		exit
+	fi
+	div=`expr $div \- 1`
+done
+
+echo "the number $num is prime"
+
