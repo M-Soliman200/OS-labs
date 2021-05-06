@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+echo "enter the number of seconds"
+read seconds
+
+hour=`expr $seconds \/ 3600`
+minute=`expr $seconds \- 3600 \* $hour`
+minute=`expr $minute \/ 60`
+second=`expr $seconds \- 3600 \* $hour \- 60 \* $minute`
+
+echo "equivant time = $hour:$minute:$second"

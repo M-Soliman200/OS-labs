@@ -1,0 +1,30 @@
+#!/bin/bash
+
+index=0
+i=1
+list=(1 1)
+while [ $i -ne 0 ]
+do
+	echo "enter a positive number :"
+	read num
+	
+	if [ num -eq 0 ]
+	then
+		i=0
+	elif [ num -gt 0 ]
+	then 
+		echo "ERROR, "
+	else
+		list[$index]=$num
+		index=`expr $index \+ 1`
+	fi
+done
+sum=0
+x=$index
+while [ index -ge 0 ]
+do
+ sum=`expr $sum \+ list[$index]`
+ index=`expr $index \- 1`
+done
+sum=`expr $sum \/ $x`
+echo "the average = $sum"
